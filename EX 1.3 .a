@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class RegexPatternCheck {
+    public static void main(String[] args) {
+
+        String pattern = "^[a-zA-Z]+[\\w]*$";
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string to match alphanumeric pattern: ");
+        String userInput = scanner.nextLine();
+
+        
+        if (Pattern.matches(pattern, userInput)) {
+            System.out.println("Valid pattern.");
+        } else {
+            System.out.println("Invalid pattern.");
+        }
+
+        scanner.close();
+    }
+}
